@@ -24,7 +24,7 @@ class Modal extends Component {
 
   render() {
 
-    const {show, component} = this.props;
+    const {show, component, options} = this.props;
 
     if(!show || !component) {
       return null;
@@ -34,7 +34,7 @@ class Modal extends Component {
       <div className="modal__wrap with-background">
         <div className="modal__container">
           <div className="modal__content">
-            <div>
+            <div className={options.size}>
               {this.renderModal(component)}
               <a title="Close (Esc)" className="modal__close" onClick={this.closeModal}>×</a>
             </div>
@@ -48,7 +48,8 @@ class Modal extends Component {
 const mapStateToProps = (state) => {
   return {
     show: state.modals.show,
-    component: state.modals.component
+    component: state.modals.component,
+    options: state.modals.options
   }
 };
 

@@ -14,9 +14,9 @@ class App extends Component {
     this.openModal = this.openModal.bind(this);
   }
 
-  openModal(e) {
+  openModal(e, options) {
     e.preventDefault();
-    this.props.showModal(DemoModal);
+    this.props.showModal(DemoModal, options);
   }
 
   render() {
@@ -25,13 +25,13 @@ class App extends Component {
         <br/><br/>
         <div className="row center-align">
           <div className="col s4">
-            <a className="waves-effect waves-light btn" onClick={this.openModal}>Small</a>
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'small'})}>Small</a>
           </div>
           <div className="col s4">
-            <a className="waves-effect waves-light btn" onClick={this.openModal}>Medium</a>
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium'})}>Medium</a>
           </div>
           <div className="col s4">
-            <a className="waves-effect waves-light btn" onClick={this.openModal}>Large</a>
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'large'})}>Large</a>
           </div>
         </div>
         <Modal />

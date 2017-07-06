@@ -1,10 +1,11 @@
 import {SHOW_MODAL, HIDE_MODAL} from './types';
 
-export function showModal(component) {
+export function showModal(component, options) {
   return {
     type: SHOW_MODAL,
     payload: {
-      component
+      component,
+      options
     }
   }
 }
