@@ -24,14 +24,17 @@ class App extends Component {
       <div className="container">
         <br/><br/>
         <div className="row center-align">
-          <div className="col s4">
+          <div className="col s3">
             <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'small'})}>Small</a>
           </div>
-          <div className="col s4">
+          <div className="col s3">
             <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium'})}>Medium</a>
           </div>
-          <div className="col s4">
+          <div className="col s3">
             <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'large'})}>Large</a>
+          </div>
+          <div className="col s3">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'full-screen'})}>Full Screen</a>
           </div>
         </div>
         <Modal />

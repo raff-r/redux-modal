@@ -32,7 +32,7 @@ class Modal extends Component {
 
     return (
       <div className="modal__wrap with-background">
-        <div className="modal__container">
+        <div className={`modal__container ${options.size === 'full-screen' ? 'full-screen' : ''}`}>
           <div className="modal__content">
             <div className={options.size}>
               {this.renderModal(component)}
