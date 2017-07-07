@@ -8,7 +8,8 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/ -o src/styles/ --watch --recursive",
     "build": "NODE_ENV=production npm run clean npm run build-css && webpack -p",
     "clean": "rimraf dist",
-    "dev": "npm run build-css && webpack-dev-server"
+    "start-js": "webpack-dev-server",
+    "dev": "npm-run-all -p watch-css start-js"
   },
   "keywords": [
     "React",
@@ -21,6 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
