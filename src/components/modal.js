@@ -41,7 +41,7 @@ class Modal extends Component {
     }
 
     return (
-      <div className="modal__wrap with-background" onClick={this.handleOnOutsideClick}>
+      <div className="modal__wrap with-background modal__wrap--zoom-in" onClick={this.handleOnOutsideClick}>
         <div className={`modal__container ${options.size === 'full-screen' ? 'full-screen' : ''}`}>
           <div className="modal__content" ref="modalContent">
             <div className={`modal__style ${options.size}`}>
