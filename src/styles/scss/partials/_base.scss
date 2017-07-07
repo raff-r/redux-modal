@@ -59,29 +59,6 @@
         z-index: 1045;
         vertical-align: middle;
 
-        > div {
-            position: relative;
-
-            width: auto;
-            margin: 0px auto;
-            padding: 34px 20px 20px;
-
-            background: #fff;
-            border-top: 4px solid #64a3c2;
-
-            &.small {
-                max-width: 600px;
-            }
-            &.medium {
-                max-width: 900px;
-            }
-            &.large {
-                max-width: 1200px;
-            }
-            &.full-screen {
-                height: 100%;
-            }
-        }
     }
 
     &__close {

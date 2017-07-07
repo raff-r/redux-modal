@@ -34,7 +34,7 @@ class Modal extends Component {
       <div className="modal__wrap with-background">
         <div className={`modal__container ${options.size === 'full-screen' ? 'full-screen' : ''}`}>
           <div className="modal__content">
-            <div className={options.size}>
+            <div className={`modal__style ${options.size}`}>
               {this.renderModal(component)}
               <a title="Close (Esc)" className="modal__close" onClick={this.closeModal}>×</a>
             </div>

@@ -1,0 +1,25 @@
+.modal__style {
+    position: relative;
+
+    padding: 34px 20px 20px;
+    margin: 0px auto;
+
+    background: #fff;
+
+    &.small {
+        max-width: 600px;
+    }
+
+    &.medium {
+        max-width: 900px;
+    }
+
+    &.large {
+        max-width: 1200px;
+    }
+
+    &.full-screen {
+        height: 100%;
+    }
+
+}
