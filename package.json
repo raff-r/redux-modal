@@ -2,7 +2,7 @@
   "name": "modal-popup",
   "version": "1.0.0",
   "description": "A react-redux modal",
-  "main": "lib/src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/scss/ -o src/styles/",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/ -o src/styles/ --watch --recursive",
