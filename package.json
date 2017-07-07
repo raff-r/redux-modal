@@ -7,10 +7,12 @@
     "build-css": "node-sass-chokidar src/styles/scss/ -o src/styles/",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/ -o src/styles/ --watch --recursive",
     "build": "babel src/index.js --out-dir lib",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist lib",
     "start-js": "webpack-dev-server",
-    "dev": "npm-run-all -p watch-css start-js"
-    "preinstall": "npm run build"
+    "dev": "npm-run-all -p watch-css start-js",
+    "preinstall": "npm run build",
+    "build:demo": "NODE_ENV=production npm run clean && webpack -p",
+    "deploy": "npm run build:demo && git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [
     "React",
