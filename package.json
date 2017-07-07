@@ -2,14 +2,15 @@
   "name": "modal-popup",
   "version": "1.0.0",
   "description": "A react-redux modal",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/scss/ -o src/styles/",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/ -o src/styles/ --watch --recursive",
-    "build": "NODE_ENV=production npm run clean npm run build-css && webpack -p",
+    "build": "babel src/index.js --out-dir lib",
     "clean": "rimraf dist",
     "start-js": "webpack-dev-server",
     "dev": "npm-run-all -p watch-css start-js"
+    "preinstall": "npm run build"
   },
   "keywords": [
     "React",
@@ -29,6 +30,7 @@
     "redux": "^3.7.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
