@@ -11,7 +11,7 @@
 ```
 import { combineReducers } from 'redux';
 
-import modalReducer from 'redux-modal';
+import modalReducer from 'modal-popup';
 
 const rootReducer = combineReducers({
   modals: modalReducer
@@ -29,7 +29,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from "redux";
-import Modal from 'redux-modal';
+import Modal from 'modal-popup';
 
 import reducers from './reducers';
 
