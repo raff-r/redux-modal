@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
+import Utils from '../utils/utils';
+
 import {hideModal} from '../actions'
 
 import '../styles/modals.css';
@@ -10,14 +12,22 @@ class Modal extends Component {
   constructor(props) {
     super(props);
 
-    this.closeModal = this.closeModal.bind(this);
+    this.handleOnCloseClick = this.handleOnCloseClick.bind(this);
+    this.handleOnOutsideClick = this.handleOnOutsideClick.bind(this);
+
   }
 
   renderModal(ModalComponent) {
     return <ModalComponent />
   }
 
-  closeModal(e) {
+  handleOnOutsideClick(e) {
+    if (!Utils.isChildOf(e.target, this.refs.modalContent) || false) {
+      this.props.hideModal();
+    }
+  }
+
+  handleOnCloseClick(e) {
     e.preventDefault();
     this.props.hideModal();
   }
@@ -31,12 +41,12 @@ class Modal extends Component {
     }
 
     return (
-      <div className="modal__wrap with-background">
+      <div className="modal__wrap with-background" onClick={this.handleOnOutsideClick}>
         <div className={`modal__container ${options.size === 'full-screen' ? 'full-screen' : ''}`}>
-          <div className="modal__content">
+          <div className="modal__content" ref="modalContent">
             <div className={`modal__style ${options.size}`}>
               {this.renderModal(component)}
-              <a title="Close (Esc)" className="modal__close" onClick={this.closeModal}>×</a>
+              <a title="Close (Esc)" className="modal__close" onClick={this.handleOnCloseClick}>×</a>
             </div>
           </div>
         </div>
