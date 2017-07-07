@@ -10,7 +10,7 @@
     "clean": "rimraf dist lib",
     "start-js": "webpack-dev-server",
     "dev": "npm-run-all -p watch-css start-js",
-    "preinstall": "npm run build",
+    "postinstall": "npm run build",
     "build:demo": "NODE_ENV=production npm run clean && webpack -p",
     "deploy": "npm run build:demo && git subtree push --prefix dist origin gh-pages"
   },
