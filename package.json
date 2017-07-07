@@ -2,11 +2,11 @@
   "name": "modal-popup",
   "version": "1.0.0",
   "description": "A react-redux modal",
-  "main": "lib/index.js",
+  "main": "lib/src/index.js",
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/scss/ -o src/styles/",
     "watch-css": "npm run build-css && node-sass-chokidar src/styles/scss/ -o src/styles/ --watch --recursive",
-    "build": "babel src/index.js --out-dir lib",
+    "build": "babel src/ --out-dir lib",
     "clean": "rimraf dist lib",
     "start-js": "webpack-dev-server",
     "dev": "npm-run-all -p watch-css start-js",
