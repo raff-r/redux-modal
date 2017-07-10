@@ -22,14 +22,17 @@ export default rootReducer;
 
 ##### NOTE: The reducer name for `redux-modal` must be `modals`.
 
-##### 3. Add the `Modal` component to the root of your app.
+##### 3. Add the `Modal` component and styles to the root of your app.
 
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from "redux";
-import Modal from 'modal-popup';
+import {
+    modal as Modal,
+    styles
+} from 'modal-popup';
 
 import reducers from './reducers';
 
@@ -41,7 +44,70 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <Modal />
+    <div>
+        ... other JSX ...
+        <ReduxModal />
+    </div>
   </Provider>
   , document.querySelector('#root'));
 ```
+
+##### 4. Build button to open modal and pass in component.
+
+```
+import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {actions} from 'modal-popup';
+
+const DemoModal = () => {
+  return (
+    <div>
+      This is a test modal
+    </div>
+  )
+};
+
+class AppTest extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.openModal = this.openModal.bind(this);
+  }
+
+  openModal(e, options) {
+    e.preventDefault();
+    this.props.showModal(DemoModal, options);
+  }
+
+  render() {
+
+    return (
+      <div className="container">
+        <br/><br/>
+        <div className="row center-align">
+          <div className="col s3">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'small'})}>Small</a>
+          </div>
+          <div className="col s3">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium'})}>Medium</a>
+          </div>
+          <div className="col s3">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'large'})}>Large</a>
+          </div>
+          <div className="col s3">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'full-screen'})}>Full Screen</a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default connect(null,actions)(AppTest);
+```
+
+## Options
+Property    | Description                           | Values                            |
+----------- | ------------------------------------- | --------------------------------- |
+size        | Adjust the width of the modal popup   | small, medium, large, full-screen |
