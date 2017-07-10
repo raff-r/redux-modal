@@ -3,9 +3,7 @@ import {connect} from 'react-redux';
 
 import Utils from '../utils/utils';
 
-import {hideModal} from '../actions'
-
-import styles from '../styles/modals.css';
+import {hideModal} from '../actions';
 
 class Modal extends Component {
 
