@@ -110,7 +110,7 @@ export default connect(null,actions)(AppTest);
 
 ## API (actions)
 
-###showModal(component, options)
+### showModal(component, options)
 Display a modal popup with a specific React component and options
 
 #### component (React component)
@@ -123,5 +123,5 @@ Property    | Description                           | Values                    
 ----------- | ------------------------------------- | --------------------------------- |
 size        | Adjust the width of the modal popup   | small, medium, large, full-screen |
 
-###hideModal()
+### hideModal()
 Remove the current open modal from the DOM
