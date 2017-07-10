@@ -5,7 +5,7 @@ import Utils from '../utils/utils';
 
 import {hideModal} from '../actions'
 
-import '../styles/modals.css';
+import styles from '../styles/modals.css';
 
 class Modal extends Component {
 
