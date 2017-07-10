@@ -1,7 +1,7 @@
 {
   "name": "modal-popup",
   "version": "1.0.0",
-  "description": "A react-redux modal",
+  "description": "A react-redux modal popup",
   "main": "lib/index.js",
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/scss/ -o src/styles/",
@@ -23,7 +23,7 @@
     "Lightbox",
     "popup"
   ],
-  "author": "MoneySavingExpert.com",
+  "author": "Raffaele Rizzett <hello@raffr.co.uk>",
   "license": "ISC",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",

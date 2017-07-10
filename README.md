@@ -107,7 +107,21 @@ class AppTest extends Component {
 export default connect(null,actions)(AppTest);
 ```
 
-## Options
+
+## API (actions)
+
+###showModal(component, options)
+Display a modal popup with a specific React component and options
+
+#### component (React component)
+The react component to render inside of the modal popup
+
+#### options (Object)
+The properties to adjust the behaviour of the modal popup
+
 Property    | Description                           | Values                            |
 ----------- | ------------------------------------- | --------------------------------- |
 size        | Adjust the width of the modal popup   | small, medium, large, full-screen |
+
+###hideModal()
+Remove the current open modal from the DOM
