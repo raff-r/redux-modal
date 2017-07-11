@@ -1,6 +1,6 @@
 {
   "name": "modal-popup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react-redux modal popup",
   "main": "lib/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "clean": "rimraf dist lib",
     "start-js": "webpack-dev-server",
     "dev": "npm-run-all -p watch-css start-js",
-    "postinstall": "npm run build",
+    "prepublish": "npm run build",
     "build:demo": "NODE_ENV=production npm run clean && webpack -p",
     "deploy": "npm run build:demo && git subtree push --prefix dist origin gh-pages",
     "test": "jest",
@@ -27,6 +27,13 @@
     "Lightbox",
     "popup"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raff-r/redux-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/raff-r/redux-modal/issues"
+  },
   "author": "Raffaele Rizzett <hello@raffr.co.uk>",
   "license": "ISC",
   "dependencies": {
