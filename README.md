@@ -119,9 +119,11 @@ The react component to render inside of the modal popup
 #### options (Object)
 The properties to adjust the behaviour of the modal popup
 
-Property    | Description                           | Values                            |
------------ | ------------------------------------- | --------------------------------- |
-size        | Adjust the width of the modal popup   | small, medium, large, full-screen |
+Property            | Description                                   | Values                            |
+------------------- | --------------------------------------------- | --------------------------------- |
+size                | Adjust the width of the modal popup           | small, medium, large, full-screen |
+hideCloseBtn        | Hide close button or not                      | true, false                       |
+closeOutsideModal   | Allow modal to be closed outside content area | true, false                       |
 
 ### hideModal()
 Remove the current open modal from the DOM

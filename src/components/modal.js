@@ -20,7 +20,7 @@ class Modal extends Component {
   }
 
   handleOnOutsideClick(e) {
-    if (!Utils.isChildOf(e.target, this.refs.modalContent) || false) {
+    if (this.props.options.closeOutsideModal && !Utils.isChildOf(e.target, this.refs.modalContent)) {
       this.props.hideModal();
     }
   }
@@ -44,7 +44,7 @@ class Modal extends Component {
           <div className="modal__content" ref="modalContent">
             <div className={`modal__style ${options.size}`}>
               {this.renderModal(component)}
-              <a title="Close (Esc)" className="modal__close" onClick={this.handleOnCloseClick}>×</a>
+              {(this.props.options.hideCloseBtn) ? null : (<a title="Close (Esc)" className="modal__close" onClick={this.handleOnCloseClick}>×</a>)}
             </div>
           </div>
         </div>

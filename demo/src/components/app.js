@@ -5,6 +5,7 @@ import {showModal} from '../../../src/actions'
 
 import DemoModal from './demo-modal';
 import Modal from '../../../src/components/modal';
+import '../../../src/styles/modals.css';
 
 class App extends Component {
 
@@ -24,6 +25,7 @@ class App extends Component {
       <div className="container">
         <br/><br/>
         <div className="row center-align">
+          <h4>Size options</h4>
           <div className="col s3">
             <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'small'})}>Small</a>
           </div>
@@ -35,6 +37,26 @@ class App extends Component {
           </div>
           <div className="col s3">
             <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'full-screen'})}>Full Screen</a>
+          </div>
+        </div>
+        <br/><br/>
+        <div className="row center-align">
+          <h4>Hide close button options</h4>
+          <div className="col s6">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', hideCloseBtn: true, closeOutsideModal: true})}>Hide close button</a>
+          </div>
+          <div className="col s6">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', hideCloseBtn: false, closeOutsideModal: true})}>Don't hide close button</a>
+          </div>
+        </div>
+        <br/><br/>
+        <div className="row center-align">
+          <h4>Close outside modal options</h4>
+          <div className="col s6">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', closeOutsideModal: true})}>Close outside modal</a>
+          </div>
+          <div className="col s6">
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', closeOutsideModal: true})}>Don't close outside modal</a>
           </div>
         </div>
         <Modal />
