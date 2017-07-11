@@ -4,7 +4,7 @@
 
 ##### 1. Installation
 
-`npm install --save https://github.com/raff-r/redux-modal.git`
+`npm install --save modal-popup`
 
 ##### 2. Add the `reducer` to Redux.
 

@@ -1,0 +1,10 @@
+.DS_Store
+.git
+npm-debug.log
+src
+dist
+demo
+coverage
+.babelrc
+.gitignore
+webpack.config.js
