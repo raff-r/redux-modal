@@ -1,6 +1,6 @@
 {
   "name": "modal-popup",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "A react-redux modal popup",
   "main": "lib/index.js",
   "scripts": {
