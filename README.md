@@ -1,5 +1,9 @@
 # React Redux Modal [demo](https://raff-r.github.io/redux-modal/)
 
+[![Travis][build-badge]][build]
+[![npm package][npm-badge]][npm]
+[![Coveralls][coveralls-badge]][coveralls]
+
 ## Implementation Guide
 
 ##### 1. Installation
@@ -127,3 +131,13 @@ closeOutsideModal   | Allow modal to be closed outside content area | true, fals
 
 ### hideModal()
 Remove the current open modal from the DOM
+
+
+[build-badge]: https://img.shields.io/travis/raff-r/redux-modal/master.png?style=flat-square
+[build]: https://travis-ci.org/user/repo
+
+[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+[npm]: https://www.npmjs.org/package/npm-package
+
+[coveralls-badge]: https://img.shields.io/coveralls/raff-r/redux-modal/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/raff-r/redux-modal

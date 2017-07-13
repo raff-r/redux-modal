@@ -56,7 +56,7 @@ class App extends Component {
             <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', closeOutsideModal: true})}>Close outside modal</a>
           </div>
           <div className="col s6">
-            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', closeOutsideModal: true})}>Don't close outside modal</a>
+            <a className="waves-effect waves-light btn" onClick={(e) => this.openModal(e, {size: 'medium', closeOutsideModal: false})}>Don't close outside modal</a>
           </div>
         </div>
         <Modal />

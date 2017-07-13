@@ -2,9 +2,11 @@
 .git
 npm-debug.log
 src
-dist
 demo
 coverage
-.babelrc
+.travis.yml
+CONTRIBUTING.md
+jest.transform.js
+nwb.config.js
 .gitignore
-webpack.config.js
+tests
