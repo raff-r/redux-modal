@@ -22,7 +22,8 @@
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
-    "test:coverageWatch": "npm test -- --coverage --watch"
+    "test:coverageWatch": "npm test -- --coverage --watch",
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "peerDependencies": {
     "react": "15.x"

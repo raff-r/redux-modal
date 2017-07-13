@@ -11,10 +11,10 @@ script:
   - npm run test:coverage
 
 after_success:
+  - if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] then npm run deploy
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
 branches:
   only:
     - master
-    - development
