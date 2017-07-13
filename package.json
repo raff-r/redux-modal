@@ -23,7 +23,7 @@
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
     "test:coverageWatch": "npm test -- --coverage --watch",
-    "deploy": "npm run build && git subtree push --prefix demo/dist origin gh-pages"
+    "deploy": "npm run build && git push origin :gh-pages && git subtree push --prefix demo/dist origin gh-pages"
   },
   "peerDependencies": {
     "react": "15.x"
