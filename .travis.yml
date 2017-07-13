@@ -13,7 +13,7 @@ script:
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  - [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] && npm run deploy
+  - $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" && npm run deploy
 
 branches:
   only:
