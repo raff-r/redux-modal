@@ -1,6 +1,6 @@
 import React from 'react';
-import reducer from '../modal';
-import * as types from '../../actions/types';
+import reducer from '../../src/reducers/modal';
+import * as types from '../../src/actions/types';
 
 describe('modal reducer: ', () => {
 

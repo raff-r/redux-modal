@@ -1,6 +1,6 @@
 import React from 'react';
-import * as actions from '../index';
-import * as types from '../types';
+import * as actions from '../../src/actions/index';
+import * as types from '../../src/actions/types';
 
 describe('actions', () => {
 
