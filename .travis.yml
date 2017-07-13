@@ -22,4 +22,4 @@ branches:
 
 cache:
   directories:
-  - node_modules # NPM packages
+    - node_modules
